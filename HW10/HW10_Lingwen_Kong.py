@@ -30,11 +30,11 @@ class Repository:
 
         else:
             if tables:
-                print("\nMajors Table")
+                print("\nMajors Summary")
                 self.majors_table()
-                print("\nStudent Table ")
+                print("\nStudent Summary ")
                 self.student_table()
-                print("\nInstructor Table ")
+                print("\nInstructor Summary ")
                 self.instructor_table()
 
     def _get_majors(self, path: str):
