@@ -9,27 +9,6 @@ import os
 from HW08_Lingwen_Kong import file_reader
 
 
-class Student:
-    def __init__(self, cwid, name, major):
-        self.cwid = cwid
-        self.name = name
-        self.major = major
-        self.course = defaultdict(str)
-
-    def __repr__(self):
-        return ' '.join([self.cwid, self.name, self.major, ' '.join(self.course.keys())])
-
-
-class Instructor:
-    def __init__(self, cwid, name, dept):
-        self.cwid = cwid
-        self.name = name
-        self.dept = dept
-        self.course = defaultdict(int)
-
-    def __repr__(self):
-        return ' '.join([self.cwid, self.name, self.dept, ' '.join(self.course.keys())])
-
 
 class Repository:
     def __init__(self, path: str):
@@ -118,10 +97,25 @@ class Repository:
         print('Instructor Summary')
         print(table)
         return test
-#
-# if __name__ == "__main__":
-#     # pass directory path with all files
-#     t=Repository(os.getcwd()+"/hw9/")
-#     print(t.students.get('10103'))
-#     print(t.instructors.get('98765'))
-#     print(t.instructors.get('98765').course)
+
+
+class Student:
+    def __init__(self, cwid, name, major):
+        self.cwid = cwid
+        self.name = name
+        self.major = major
+        self.course = defaultdict(str)
+
+    def __repr__(self):
+        return ' '.join([self.cwid, self.name, self.major, ' '.join(self.course.keys())])
+
+
+class Instructor:
+    def __init__(self, cwid, name, dept):
+        self.cwid = cwid
+        self.name = name
+        self.dept = dept
+        self.course = defaultdict(int)
+
+    def __repr__(self):
+        return ' '.join([self.cwid, self.name, self.dept, ' '.join(self.course.keys())])
