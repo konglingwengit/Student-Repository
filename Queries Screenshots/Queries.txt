@@ -1,0 +1,20 @@
+1:
+SELECT Name from students where CWID = '10115'
+
+2:
+SELECT s.Major, count(*) as Count from students as s group by s.Major
+
+3:
+SELECT g.Course,g.Grade, count(g.Grade) as Frequency from grades as g where g.Course='SSW 810' group by g.Grade limit 1
+
+4:
+SELECT s.CWID,s.Name,COUNT(g.Course) as Num_of_Courses from students as s
+      JOIN grades as g
+      where s.CWID = g.StudentCWID
+      group by s.CWID
+
+5:
+SELECT s.Name,s.CWID,g.Course,g.Grade,i.Name from students as s
+      JOIN grades as g on g.StudentCWID = s.CWID
+      JOIN instructors i on g.InstructorCWID = i.CWID
+      order by s.Name ASC

@@ -10,7 +10,8 @@ import os
 
 
 def date_arithmetic() -> Tuple[datetime, datetime, int]:
-    """ returns date three days after Feb 27, 2000, Feb 27, 2017 and number of days between Feb,1 2019 and Sept 30, 2019 """
+    """ returns date three days after Feb 27, 2020, Feb 27, 2019 and number of days between Feb,1 2019 and Sept 30,
+    2019 """
 
     three_days_after_02272000: datetime = datetime.strptime('Feb 27, 2020', "%b %d, %Y") + timedelta(days=3)
     three_days_after_02272017: datetime = datetime.strptime('Feb 27, 2019', "%b %d, %Y") + timedelta(days=3)
